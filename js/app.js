@@ -11,15 +11,15 @@ let winner, tie, inPlay
 
 /*------------------------ Cached Element References ------------------------*/
 const square = document.getElementsByClassName('sqr')
-square1 = document.getElementById('sq0')
-square2 = document.getElementById('sq1')
-square3 = document.getElementById('sq2')
-square4 = document.getElementById('sq3')
-square5 = document.getElementById('sq4')
-square6 = document.getElementById('sq5')
-square7 = document.getElementById('sq6')
-square8 = document.getElementById('sq7')
-square9 = document.getElementById('sq8')
+const square1 = document.getElementById('sq0')
+const square2 = document.getElementById('sq1')
+const square3 = document.getElementById('sq2')
+const square4 = document.getElementById('sq3')
+const square5 = document.getElementById('sq4')
+const square6 = document.getElementById('sq5')
+const square7 = document.getElementById('sq6')
+const square8 = document.getElementById('sq7')
+const square9 = document.getElementById('sq8')
 const gStatus = document.querySelector('message')
 
 
