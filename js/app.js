@@ -110,5 +110,9 @@ if (theBoard[0] + theBoard[4] + theBoard[8] === -3) return theBoard[0]
 if (theBoard[2] + theBoard[4] + theBoard[6] === 3) return theBoard[2]
 if (theBoard[2] + theBoard[4] + theBoard[6] === -3) return theBoard[2]
 
+if (theBoard.includes(null)){
   return null
+} else {
+  return "T"
+}
 }
