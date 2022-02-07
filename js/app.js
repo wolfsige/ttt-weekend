@@ -19,7 +19,7 @@ let theBoard = [], isWinner, tie, turnOrder
 const gameBoardEl = document.querySelector('.board')
 const gStatus = document.querySelector('#message')
 const sqrEls = document.querySelectorAll('.square')
-
+const resetBtn = document.querySelector('#reset-button')
 
 function handleClick(evt) {
   let sqrIdx = parseInt(evt.target.id.replace('sq', ''))
@@ -45,7 +45,7 @@ function handleClick(evt) {
 }
 
 /*----------------------------- Event Listeners -----------------------------*/
-
+resetBtn.addEventListener("click", init)
 gameBoardEl.addEventListener("click", handleClick)
 
 /*-------------------------------- Functions --------------------------------*/
@@ -56,6 +56,7 @@ function init() {
   turnOrder = 1
   isWinner = null
   gStatus.textContent = "Lets play, X goes first!"
+  resetBtn.setAttribute("hidden", true)
  render()
 
 }
@@ -75,7 +76,9 @@ function render(){
     
   })
 
-  isWinner = getWinner()
+  if (isWinner = getWinner()) {
+    resetBtn.removeAttribute("hidden")
+  }
 
   if (!isWinner){
     gStatus.textContent = `It is currently ${turnOrder === 1 ? "X's" : "O's"} turn!`
