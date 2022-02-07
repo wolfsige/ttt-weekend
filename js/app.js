@@ -22,13 +22,11 @@ const sqrEls = document.querySelectorAll('.square')
 
 
 function handleClick(evt) {
-  let sqrIdx = parseInt(evt.target.id.replace('sqrEls', ''))
+  let sqrIdx = parseInt(evt.target.id.replace('sq', ''))
 
-  if (evt.target !== theBoard){
-    return
-  } 
-  if (theBoard[sqrIdx] === 1 || theBoard[sqrIdx] === -1){
-    return gStatus.innerHTML = "that square is already taken"
+  
+  if (theBoard[sqrIdx] !== null){
+    return 
   }
   
   if(turnOrder === 1){
@@ -83,13 +81,13 @@ function render(){
   }
 }
 
-
-winCombos.forEach(total => {
+function getWinner() {
+winCombos.forEach(combo => {
   
-});
+})
 
 
-
+}
 // 5.6) Set the winner variable if there's a winner by calling a new function: getWinner.
 	  // The getWinner function will...
 
