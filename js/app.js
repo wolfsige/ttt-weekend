@@ -82,19 +82,27 @@ function render(){
 }
 
 function getWinner() {
-winCombos.forEach(combo => {
-  
-})
-
-
+if (theBoard[0] + theBoard[1] + theBoard[2] === 3) return theBoard[0]
+if (theBoard[0] + theBoard[1] + theBoard[2] === -3) return theBoard[0]
+if (theBoard[3] + theBoard[4] + theBoard[5] === 3) return theBoard[3]
+if (theBoard[3] + theBoard[4] + theBoard[5] === -3) return theBoard[3]
+if (theBoard[6] + theBoard[7] + theBoard[8] === 3) return theBoard[6]
+if (theBoard[6] + theBoard[7] + theBoard[8] === -3) return theBoard[6]
+if (theBoard[0] + theBoard[3] + theBoard[6] === 3) return theBoard[0]
+if (theBoard[0] + theBoard[3] + theBoard[6] === -3) return theBoard[0]
+if (theBoard[1] + theBoard[4] + theBoard[7] === 3) return theBoard[1]
+if (theBoard[1] + theBoard[4] + theBoard[7] === -3) return theBoard[1]
+if (theBoard[2] + theBoard[5] + theBoard[8] === 3) return theBoard[2]
+if (theBoard[2] + theBoard[5] + theBoard[8] === -3) return theBoard[2]
+if (theBoard[0] + theBoard[4] + theBoard[8] === 3) return theBoard[0]
+if (theBoard[0] + theBoard[4] + theBoard[8] === -3) return theBoard[0]
+if (theBoard[2] + theBoard[4] + theBoard[6] === 3) return theBoard[2]
+if (theBoard[2] + theBoard[4] + theBoard[6] === -3) return theBoard[2]
 }
-// 5.6) Set the winner variable if there's a winner by calling a new function: getWinner.
-	  // The getWinner function will...
 
-	  // 5.6.1) There are a couple methods you can use to find out if there is a winner.
-	   // This is the first, more elegant way that takes advantage of the winningCombos array you wrote above in step 4.
-	   // The 5.6.2 step is a little simpler to comprehend, but you'll need to write a lot more code.
-	   // The 5.6.2 step also won't take advantage of the winningCombos array, but using it as a reference will help you build a solution.
+
+
+
 	   // Choose only one path.
 		  // 5.6.1.1) Loop through the each of the winning combination arrays defined.
 		  // 5.6.1.2) Total up the three board positions using the three indexes in the current combo.
