@@ -37,6 +37,10 @@ function handleClick(evt) {
   }
   turnOrder = turnOrder * -1
 
+  if (isWinner !== null){
+    return
+  }
+
   render ()
 }
 
@@ -68,7 +72,10 @@ function render(){
     else {
       sqrEl.textContent = ""
     }
+    
   })
+
+  isWinner = getWinner()
 
   if (!isWinner){
     gStatus.textContent = `It is currently ${turnOrder === 1 ? "X's" : "O's"} turn!`
@@ -79,6 +86,7 @@ function render(){
   else {
     gStatus.textContent = `Looks like ${isWinner === 1 ? "X" : "O"} takes this game.`
   }
+  getWinner()
 }
 
 function getWinner() {
@@ -98,18 +106,6 @@ if (theBoard[0] + theBoard[4] + theBoard[8] === 3) return theBoard[0]
 if (theBoard[0] + theBoard[4] + theBoard[8] === -3) return theBoard[0]
 if (theBoard[2] + theBoard[4] + theBoard[6] === 3) return theBoard[2]
 if (theBoard[2] + theBoard[4] + theBoard[6] === -3) return theBoard[2]
+
+  return null
 }
-
-
-
-
-	   // Choose only one path.
-		  // 5.6.1.1) Loop through the each of the winning combination arrays defined.
-		  // 5.6.1.2) Total up the three board positions using the three indexes in the current combo.
-		  // 5.6.1.3) Convert the total to an absolute value (convert any negative total to positive).
-		  // 5.6.1.4) If the total equals 3, we have a winner! Set the winner variable to the board's value at the index specified by the first index of that winning combination's array by returning that value.
-
-		// 5.6.2) This solution is less elegant, but might be easier to write on your own if you're struggling with the 5.6.1.X pseudocode.
-		  // 5.6.2.1) For each one of the winning combinations you wrote in step 4, find the total of each winning combination.
-		  // 5.6.2.2) Convert the total to an absolute value (convert any negative total to positive)
-		  // 5.6.2.3) If the total equals 3, we have a winner! Set the winner variable to the board's value at the index specified by the first index of that winning combination's array by returning that value.
